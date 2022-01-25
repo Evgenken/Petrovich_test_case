@@ -48,7 +48,7 @@
   background: #F8CB46;
 }
 .intro__text {
-  font-family: "Graphik Cy";
+  font-family: "Graphik Cy", sans-serif;
   font-weight: bold;
   font-size: 32px;
   text-align: center;
