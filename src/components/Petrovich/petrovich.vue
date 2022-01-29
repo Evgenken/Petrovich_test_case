@@ -1,27 +1,28 @@
 <template>
   <div>
-  <div class="intro">
-    <div class="logo">
-      <div class="logo__item-1"><img src="@/assets/img/logo.png"> </div>
-      <div class="logo__item-2"><img src="@/assets/img/SVGID.png"></div>
+    <div class="intro">
+      <div class="logo">
+        <div class="logo__item-1"><img src="@/assets/img/logo.png"> </div>
+        <div class="logo__item-2"><img src="@/assets/img/SVGID.png"></div>
       </div>
-          <div class="intro__text">лайфхаки и сервисы, которые пригодятся всем</div>
-    <div class="img-slogan">
-      <div class="circle-1"><img src="@/assets/img/Ellipse 8.png"></div>
-      <div class="img-slogan__instrument-1"><img src="@/assets/img/roulette.png"></div>
-      <div class="img-slogan__letters"><img src="@/assets/img/letters.png" alt=""></div>
-      <div class="img-slogan__instrument-2"><img src="@/assets/img/bucket.png"></div>
-  </div>
-    <div class="stair"><img src="@/assets/img/stair.png"></div>
-  </div>
-  <div>
-    <div class="background">
-      <img src="@/assets/img/background3.png" class="background_item-1">
-      <img src="@/assets/img/Rectangle 1239.png" class="background__item-2">
-      <img src="@/assets/img/Ellipse 15.png" class="background__item-3">
+      <div class="intro__text">лайфхаки и сервисы, которые пригодятся всем</div>
+      <div class="img-slogan">
+        <div class="img-slogan__circle-1"><img src="@/assets/img/Ellipse 8.png"></div>
+        <div class="img-slogan__instrument-1"><img src="@/assets/img/roulette.png"></div>
+        <div class="img-slogan__letters"><img src="@/assets/img/letters.png" alt=""></div>
+        <div class="img-slogan__instrument-2"><img src="@/assets/img/bucket.png"></div>
+      </div>
+      <div class="img">
+        <img src="@/assets/img/stair.png" class="img__stair">
+      </div>
     </div>
 
-  </div>
+      <div class="background">
+        <img src="@/assets/img/background3.png" class="background__item-1">
+        <div class="background__container"><img src="@/assets/img/Ellipse 15.png"></div>
+      </div>
+      <div class="rectangle"><img src="@/assets/img/Rectangle 1239.png"></div>
+
   </div>
 </template>
 
@@ -45,6 +46,7 @@
   background: #F8CB46;
   flex: 1 0 auto;
 }
+
 .intro__text {
   font-family: "Graphik Cy", sans-serif;
   font-weight: bold;
@@ -60,29 +62,50 @@
 justify-content: space-between;
   align-items: center;
   padding-top: 20px;
+
   &__item-1{
     margin-left: 150px;
     z-index: 1;
   }
+
   &__item-2{
     margin-right: 150px;
     z-index: 1;
   }
 }
 
-.stair{
-  z-index: 3;
-  animation-duration: 3s;
-  animation-name: stair;
+.img {
+  width: 396px;
+  height: 440px;
   position: absolute;
-  bottom: 145px;
-  left: 500px;
+  overflow: hidden;
+  bottom: 230px;
+  left:calc(50% - 258px);
+  z-index: 3;
+   &__stair {
+     animation-duration: 3s;
+     animation-name: stair;
+     position: relative;
+   }
 }
+
 .background{
 
+display: flex;
+  position: relative;
+
+
  &__item-1{
-width-max:100% ;
+max-width:100% ;
  }
+  &__container{
+    width: 44px;
+    height: 87px;
+    position: absolute;
+    right: 0;
+    bottom: -43px;
+    overflow: hidden;
+  }
 }
 /*img*/
 
@@ -91,55 +114,83 @@ width-max:100% ;
   display: flex;
   justify-content: center;
   padding-top: 20px;
+
+  &__circle-1{
+    top: -170px;
+    right: 30px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
   &__letters{
     z-index: 3;
   }
+
   &__instrument-1 {
     position: absolute;
     margin-right: 500px;
     animation-duration: 3s;
     animation-name: roulette;
   }
+
   &__instrument-2{
     position: absolute;
-    margin-left: 500px;
+    margin-left: 600px;
     animation-duration: 3s;
     animation-name: bucket;
   }
 }
+
 @keyframes roulette {
+
   from{
-    margin-left: 10%;
-width: 100%;
+    margin-right: 100%;
   }
+
   to{
     margin-right: 500px;
-width: 18.3%;
   }
 }
+
 @keyframes bucket {
+
   from{
-    margin-right: -150%;
-    width: 100%;
+    margin-left: 80%;
   }
+
   to{
-    margin-left: 500px;
-    width: 12.1%;
+    margin-left: 600;
   }
 }
+
 @keyframes stair {
+
   from{
-    margin-top: -150%;
-    height: 100%;
+    margin-top: 500px;
   }
+
   to{
-    margin-top: -800px;
-    height: 12.1%;
+    margin-top: 0;
   }
 }
-/* circle */
 
-.circle-1{
+.rectangle{
 
+  text-align: center;
+  animation-name: rectangle;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
 }
+@keyframes rectangle {
+
+  from{}
+
+  to{
+    margin-top: 30px;
+  }
+}
+
 </style>
