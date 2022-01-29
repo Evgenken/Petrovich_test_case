@@ -90,10 +90,8 @@ justify-content: space-between;
 }
 
 .background{
-
 display: flex;
   position: relative;
-
 
  &__item-1{
 max-width:100% ;
@@ -190,6 +188,128 @@ max-width:100% ;
 
   to{
     margin-top: 30px;
+  }
+}
+
+@media (max-width: 1280px) {
+
+  .intro {
+    height: 560px;
+
+    &__text {
+      font-size: 24px;
+      padding-top: 70px;
+    }
+  }
+
+  .logo {
+    padding-top: 5px;
+
+    &__item-1 {
+      margin-left: 120px;
+    }
+
+    &__item-2 {
+      margin-right: 120px;
+    }
+  }
+
+  .img-slogan {
+    transform: scale(69%);
+    padding-top: 0px;
+    margin-top: -50px;
+
+    &__letters {
+      transform: scale(0.85);
+      padding-right: 50px;
+    }
+
+    &__circle-1 {
+      top: -250px;
+      right: -15px;
+      transform: scale(131%);
+    }
+
+    &__instrument-1 {
+      margin-left: -450px;
+      z-index: 4;
+    }
+
+    &__instrument-2 {
+      margin-right: -300px;
+      transform: scale(121%);
+    }
+  }
+
+  .img {
+    transform: scale(80%);
+    bottom: 350px;
+  }
+
+  .background__container {
+    width: 87px;
+    right: 40px;
+    bottom: -43px;
+  }
+}
+
+@media (max-width: 768px){
+
+  .intro {
+    height: 370px;
+
+    &__text {
+      font-size: 14px;
+      padding-top: 50px;
+      font-weight: normal;
+    }
+  }
+
+  .logo {
+    padding-top: 5px;
+    transform: scale(0.8);
+    &__item-1 {
+      margin-left: -60px;
+    }
+
+    &__item-2 {
+      margin-right: -60px;
+    }
+  }
+
+  .img-slogan {
+    transform: scale(35%);
+    margin-top: -100px;
+
+    &__letters {
+      padding-right: 0;
+    }
+
+    &__circle-1 {
+      display: none;
+    }
+
+    &__instrument-1 {
+      bottom: -150px;
+      left: -350px;
+    }
+
+    &__instrument-2 {
+      bottom: -150px;
+      right: -450px;
+    }
+  }
+
+  .img {
+    transform: scale(35%);
+    top: 36px;
+    left:calc(50% - 198px);
+  }
+
+  .background__container {
+    transform: scale(0.5);
+    right: -10px;
+    bottom: 0;
   }
 }
 
